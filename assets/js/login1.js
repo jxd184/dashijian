@@ -20,11 +20,11 @@ $(function () {
         }
     })
 
-    $("#form_reg").on('sumit', function (e) {
+    $("#form_reg").on('submit', function (e) {
         e.preventDefault();
         var data = {
             username: $("#form_reg [name=username]").val(),
-            userword: $("#form_reg [name=password]").val(),
+            password: $("#form_reg [name=password]").val(),
         }
         $.post('/api/reguser', data, function (res) {
             if (res.status != 0) {
